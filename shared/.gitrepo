@@ -6,6 +6,6 @@
 [subrepo]
 	remote = ../n98-shared
 	branch = master
-	commit = 3d299b8abae66473227390bf224b26db655fe3fa
-	parent = d0c1d1f8f0415707a8a3a072135ccd90ae8f439b
+	commit = 7ab3ace8d16c787e65c7d4dcabbf949b24f555a9
+	parent = 0d3d5f588b6b1ab286694673881ae6a757ea0646
 	cmdver = 0.3.0
