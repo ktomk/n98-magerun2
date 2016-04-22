@@ -1,0 +1,11 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = ../n98-shared
+	branch = master
+	commit = 3d299b8abae66473227390bf224b26db655fe3fa
+	parent = d0c1d1f8f0415707a8a3a072135ccd90ae8f439b
+	cmdver = 0.3.0
