@@ -31,7 +31,7 @@ class CreateAdditionalFiles extends AbstractSubCommand implements CommandConfigA
                     $this->getCommand()->getHelper('twig')->render($template, $this->config->getArray('twigVars'))
                 );
 
-                $this->output->writeln('<info>Created file: <comment>' .  $outFile .'<comment></info>');
+                $this->output->writeln('<info>Created file: <comment>' . $outFile . '<comment></info>');
             }
         }
     }
