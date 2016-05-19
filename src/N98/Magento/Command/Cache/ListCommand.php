@@ -82,7 +82,7 @@ class ListCommand extends AbstractMagentoCommand
         }
 
         $this->getHelper('table')
-             ->setHeaders(array('Name', 'Type', 'Enabled'))
-             ->renderByFormat($output, $tableData, $input->getOption('format'));
+                ->setHeaders(array('Name', 'Type', 'Enabled'))
+                ->renderByFormat($output, $tableData, $input->getOption('format'));
     }
 }

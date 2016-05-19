@@ -89,8 +89,8 @@ class ListCommand extends AbstractMagentoCommand
         }
 
         $observerConfig = $this->getObjectManager()
-                          ->get('\Magento\Framework\Event\Config\Reader')
-                          ->read($area);
+                            ->get('\Magento\Framework\Event\Config\Reader')
+                            ->read($area);
 
         if (true === $input->getOption('sort')) {
             /**
@@ -125,8 +125,8 @@ class ListCommand extends AbstractMagentoCommand
 
         // @todo Output is a bit ugly!?
         $this->getHelper('table')
-             ->setHeaders(['Event', 'Observer name', 'Fires'])
-             ->setRows($table)
-             ->renderByFormat($output, $table, $input->getOption('format'));
+                ->setHeaders(['Event', 'Observer name', 'Fires'])
+                ->setRows($table)
+                ->renderByFormat($output, $table, $input->getOption('format'));
     }
 }
