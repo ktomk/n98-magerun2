@@ -13,7 +13,7 @@ class CreateAdditionalFiles extends AbstractSubCommand implements CommandConfigA
     protected $commandConfig;
 
     /**
-     * @return bool
+     * @return boolean|null
      */
     public function execute()
     {
