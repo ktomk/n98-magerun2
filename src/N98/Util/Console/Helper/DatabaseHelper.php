@@ -297,7 +297,7 @@ class DatabaseHelper extends AbstractHelper
                         $definitions,
                         $resolved
                     );
-                    $resolvedList    = array_merge($resolvedList, $tables);
+                    $resolvedList = array_merge($resolvedList, $tables);
                 }
                 continue;
             }
