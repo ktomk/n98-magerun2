@@ -109,7 +109,7 @@ class InfoCommand extends AbstractMagentoCommand
 
     public function hasInfo()
     {
-        return ! empty($this->infos);
+        return !empty($this->infos);
     }
 
     public function getInfo($key = null)

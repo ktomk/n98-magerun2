@@ -62,7 +62,7 @@ class ListCommand extends AbstractMagentoCommand
         $area = $input->getArgument('area');
         $eventFilter = $input->getArgument('event');
 
-        if (is_null($area) || ! in_array($area, $this->areas)) {
+        if (is_null($area) || !in_array($area, $this->areas)) {
             foreach ($this->areas as $key => $area) {
                 $question[] = '<comment>[' . ($key + 1) . ']</comment> ' . $area . PHP_EOL;
             }
@@ -70,7 +70,7 @@ class ListCommand extends AbstractMagentoCommand
             $question[] = '<question>Please select an area:</question>';
 
             $area = $this->getHelper('dialog')->askAndValidate($output, $question, function ($areaIndex) {
-                if (! in_array($areaIndex, range(1, count($this->areas)))) {
+                if (!in_array($areaIndex, range(1, count($this->areas)))) {
                     throw new \InvalidArgumentException('Invalid selection.');
                 }
 
@@ -81,7 +81,7 @@ class ListCommand extends AbstractMagentoCommand
         if ($input->getOption('format') === null) {
             $sectionHeader = 'Observers in [' . $area . '] area';
 
-            if (! is_null($eventFilter)) {
+            if (!is_null($eventFilter)) {
                 $sectionHeader .= ' registered for [' . $eventFilter . '] event';
             }
 
@@ -109,13 +109,13 @@ class ListCommand extends AbstractMagentoCommand
         foreach ($observerConfig as $eventName => $observers) {
             $firstObserver = true;
 
-            if (! is_null($eventFilter) && $eventName != $eventFilter) {
+            if (!is_null($eventFilter) && $eventName != $eventFilter) {
                 continue;
             }
 
             foreach ($observers as $observerName => $observerData) {
                 if ($firstObserver) {
-                    $firstObserver = ! $firstObserver;
+                    $firstObserver = !$firstObserver;
                     $table[] = [$eventName, $observerName, $observerData['instance'] . '::' . $observerData['name']];
                 } else {
                     $table[] = ['', $observerName, $observerData['instance'] . '::' . $observerData['name']];
