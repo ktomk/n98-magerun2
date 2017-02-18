@@ -5,6 +5,7 @@ RECENT CHANGES
 -----
 * Fix: install Magento2 without development dependencies (by Tom Klingenberg, #272)
 * Fix: db:dump stdout output (report by Flip Hess, fix by Tom Klingenberg, #258)
+* New: Offer Magento2 development version to install (by Tom Klingenberg)
 
 1.3.2
 -----

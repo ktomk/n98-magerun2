@@ -170,6 +170,14 @@ commands:
 
   N98\Magento\Command\Installer\InstallCommand:
     magento-packages:
+      - name: magento-ce-develop
+        package: magento/magento2ce
+        version: dev-develop
+        options:
+          -n: true
+          prefer-dist: true
+          stability: dev
+          repository: '{"type": "vcs", "url": "git@github.com:magento/magento2.git"}'
       - name: magento-ce-2.1.4
         package: magento/project-community-edition
         version: 2.1.4

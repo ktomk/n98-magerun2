@@ -76,7 +76,7 @@ ensure_magento() {
     if [ "" != "$version" ]; then
         buildecho "version '${version}' already installed, skipping setup"
     else
-        php -dmemory_limit=1g -f "${magerun_cmd}" -- install \
+        php -dmemory_limit=1g -f "${magerun_cmd}" -- -vvv install \
                     --magentoVersionByName="${magento_version}" --installationFolder="${directory}" \
                     --dbHost="${db_host}" --dbPort="${db_port}" --dbUser="${db_user}" --dbPass="${db_pass}" \
                     --dbName="${db_name}" \
